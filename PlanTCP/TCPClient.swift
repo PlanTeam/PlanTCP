@@ -12,6 +12,7 @@ import Darwin
 public enum TCPError : ErrorType {
     case ConnectionFailed
     case NotConnected
+    case AlreadyConnected
     case SendFailure(errorCode: Int)
     case ReceiveFailure(errorCode: Int)
     case ConnectionClosedByServer
@@ -31,6 +32,10 @@ public class TCPClient {
     }
     
     public func connect() throws {
+        guard !connected else {
+            throw TCPError.AlreadyConnected
+        }
+        
         self.sock = socket(AF_INET, SOCK_STREAM, 0)
         if sock == -1 {
             throw TCPError.ConnectionFailed
@@ -86,6 +91,14 @@ public class TCPClient {
         buffer.removeRange(receivedBytes..<buffer.count)
         
         return buffer
+    }
+    
+    public func disconnect() throws {
+        try assertConnected()
+        
+        Foundation.close(sock)
+        
+        connected = false
     }
     
     public var numberOfBytesAvailable: Int { return Int(_plantcp_socket_get_bytes_available(sock)) }
