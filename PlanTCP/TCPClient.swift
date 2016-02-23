@@ -96,9 +96,9 @@ public class TCPClient {
     public func disconnect() throws {
         try assertConnected()
         
-        Foundation.close(sock)
-        
         connected = false
+        
+        Foundation.close(sock)
     }
     
     public var numberOfBytesAvailable: Int { return Int(_plantcp_socket_get_bytes_available(sock)) }
