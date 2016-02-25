@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A8567891C7744D300528C38 /* TCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8567881C7744D300528C38 /* TCPServer.swift */; };
 		F2CC56191C6C9FA4009BA6E2 /* PlanTCP.h in Headers */ = {isa = PBXBuildFile; fileRef = F2CC56181C6C9FA4009BA6E2 /* PlanTCP.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F2CC56201C6C9FA4009BA6E2 /* PlanTCP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2CC56151C6C9FA4009BA6E2 /* PlanTCP.framework */; };
 		F2CC56251C6C9FA4009BA6E2 /* PlanTCPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CC56241C6C9FA4009BA6E2 /* PlanTCPTests.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A8567881C7744D300528C38 /* TCPServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCPServer.swift; sourceTree = "<group>"; };
 		F2CC56151C6C9FA4009BA6E2 /* PlanTCP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlanTCP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2CC56181C6C9FA4009BA6E2 /* PlanTCP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanTCP.h; sourceTree = "<group>"; };
 		F2CC561A1C6C9FA4009BA6E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				F2CC56181C6C9FA4009BA6E2 /* PlanTCP.h */,
 				F2CC561A1C6C9FA4009BA6E2 /* Info.plist */,
 				F2CC562F1C6C9FBC009BA6E2 /* TCPClient.swift */,
+				0A8567881C7744D300528C38 /* TCPServer.swift */,
 				F2CC56321C6CC702009BA6E2 /* PlanTCP_priv.c */,
 				F2CC56331C6CC702009BA6E2 /* PlanTCP_priv.h */,
 				F2CC56371C6CCAE5009BA6E2 /* TCPClientConvenience.swift */,
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A8567891C7744D300528C38 /* TCPServer.swift in Sources */,
 				F2CC56301C6C9FBC009BA6E2 /* TCPClient.swift in Sources */,
 				F2CC56381C6CCAE5009BA6E2 /* TCPClientConvenience.swift in Sources */,
 				F2CC56341C6CC702009BA6E2 /* PlanTCP_priv.c in Sources */,
@@ -402,6 +406,7 @@
 				F2CC562B1C6C9FA4009BA6E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F2CC562C1C6C9FA4009BA6E2 /* Build configuration list for PBXNativeTarget "PlanTCPTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +415,7 @@
 				F2CC562E1C6C9FA4009BA6E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

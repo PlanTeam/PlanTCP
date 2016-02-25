@@ -16,6 +16,8 @@ public enum TCPError : ErrorType {
     case SendFailure(errorCode: Int)
     case ReceiveFailure(errorCode: Int)
     case ConnectionClosedByServer
+    case ConnectionClosed
+    case BindFailed
 }
 
 public class TCPClient {
@@ -37,7 +39,7 @@ public class TCPClient {
         }
         
         self.sock = socket(AF_INET, SOCK_STREAM, 0)
-        if sock == -1 {
+        if sock < 0 {
             throw TCPError.ConnectionFailed
         }
         
